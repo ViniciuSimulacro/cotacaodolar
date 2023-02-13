@@ -1,7 +1,7 @@
 import requests
 import json
 
-start_date = 2023020110
+start_date = 20230201
 days = int(input("Quantos dias mais você gostaria de saber a cotação [1-20]: "))
 end_date = start_date + days
 all_cotations = []
@@ -18,7 +18,6 @@ for d in range(start_date,end_date):
     start_date = int(start_date)
     end_date += 1
     start_date += 1
-
-
+    
 for datacota in range(0,(end_date - start_date)):
     print(f'A cotação do dia {all_cotations[datacota][0]} foi de R$ {all_cotations[datacota][1]}')
