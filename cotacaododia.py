@@ -1,8 +1,13 @@
 import requests
 import json
+from datetime import datetime
+from time import time;
 
 cotacoes = requests.get('https://economia.awesomeapi.com.br/last/USD-BRL')
 cotacoes = cotacoes.json()
-cotacoes_dolar = cotacoes['USDBRL']['bid']
+data = cotacoes['USDBRL']['timestamp']
+#data = time()
+print(type(data))
+#print(datetime.utcfromtimestamp(data).strftime('%d/%m/%Y'))
 
-print(cotacoes_dolar)
+#print(cotacoes_dolar)
